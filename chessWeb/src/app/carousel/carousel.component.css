@@ -1,0 +1,52 @@
+/* Full-screen background image */
+.homepage-background {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: url('../images/chessimg.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Overlay to darken the background image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content on top of the overlay */
+.content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  opacity: 0; /* Initially hide content */
+  animation: fadeIn 1s ease forwards; /* Apply fade in animation */
+  animation-delay: 1s; /* Delay animation by 2 seconds */
+}
+
+.content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
